@@ -1,0 +1,698 @@
+{
+  "version": "1.00",
+  "projectName": "",
+  "author": "eprem",
+  "items": [
+    {
+      "parentId": 0,
+      "type": "subMenu",
+      "item": {
+        "secured": false,
+        "name": "Setup",
+        "variableName": "Setup",
+        "id": 100,
+        "eepromAddress": -1,
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true
+      }
+    },
+    {
+      "parentId": 100,
+      "type": "textItem",
+      "item": {
+        "textLength": 15,
+        "itemType": "PLAIN_TEXT",
+        "name": "Name",
+        "variableName": "SetupName",
+        "id": 101,
+        "eepromAddress": -1,
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true
+      }
+    },
+    {
+      "parentId": 100,
+      "type": "enumItem",
+      "item": {
+        "enumEntries": [
+          "10%",
+          "20%",
+          "30%",
+          "40%",
+          "50%",
+          "60%",
+          "70%",
+          "80%",
+          "90%",
+          "100%"
+        ],
+        "name": "Backlight",
+        "variableName": "SetupBacklight",
+        "id": 102,
+        "eepromAddress": -1,
+        "functionName": "setBacklight",
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true
+      }
+    },
+    {
+      "parentId": 100,
+      "type": "enumItem",
+      "item": {
+        "enumEntries": [
+          "Normal",
+          "Name"
+        ],
+        "name": "Badge Mode",
+        "variableName": "SetupBadgeMode",
+        "id": 103,
+        "eepromAddress": -1,
+        "functionName": "setBadgeMode",
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true
+      }
+    },
+    {
+      "parentId": 100,
+      "type": "actionMenu",
+      "item": {
+        "name": "Save",
+        "variableName": "SetupSave",
+        "id": 109,
+        "eepromAddress": -1,
+        "functionName": "SetupSave",
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true
+      }
+    },
+    {
+      "parentId": 100,
+      "type": "subMenu",
+      "item": {
+        "secured": false,
+        "name": "WiFi",
+        "variableName": "SetupWiFi",
+        "id": 120,
+        "eepromAddress": -1,
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true
+      }
+    },
+    {
+      "parentId": 120,
+      "type": "boolItem",
+      "item": {
+        "naming": "TRUE_FALSE",
+        "name": "Enable WiFi",
+        "variableName": "SetupWiFiEnableWiFi",
+        "id": 121,
+        "eepromAddress": -1,
+        "functionName": "setWiFiEnable",
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true
+      }
+    },
+    {
+      "parentId": 120,
+      "type": "textItem",
+      "item": {
+        "textLength": 32,
+        "itemType": "PLAIN_TEXT",
+        "name": "SSID",
+        "variableName": "SetupWiFiSSID",
+        "id": 122,
+        "eepromAddress": -1,
+        "functionName": "setSSID",
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true
+      }
+    },
+    {
+      "parentId": 120,
+      "type": "textItem",
+      "item": {
+        "textLength": 32,
+        "itemType": "PLAIN_TEXT",
+        "name": "PW",
+        "variableName": "SetupWiFiPassword",
+        "id": 123,
+        "eepromAddress": -1,
+        "functionName": "setWiFiPassword",
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true
+      }
+    },
+    {
+      "parentId": 120,
+      "type": "enumItem",
+      "item": {
+        "enumEntries": [
+          "Not Avail",
+          "Connected",
+          "Trying..."
+        ],
+        "name": "Status",
+        "variableName": "SetupWiFiStatus",
+        "id": 124,
+        "eepromAddress": -1,
+        "readOnly": true,
+        "localOnly": false,
+        "visible": true
+      }
+    },
+    {
+      "parentId": 120,
+      "type": "textItem",
+      "item": {
+        "textLength": 7,
+        "itemType": "PLAIN_TEXT",
+        "name": "UUID",
+        "variableName": "SetupWiFiUUID",
+        "id": 125,
+        "eepromAddress": -1,
+        "readOnly": true,
+        "localOnly": false,
+        "visible": true
+      }
+    },
+    {
+      "parentId": 120,
+      "type": "textItem",
+      "item": {
+        "textLength": 15,
+        "itemType": "PLAIN_TEXT",
+        "name": "IPaddr",
+        "variableName": "SetupWiFiIPaddr",
+        "id": 126,
+        "eepromAddress": -1,
+        "readOnly": true,
+        "localOnly": false,
+        "visible": true
+      }
+    },
+    {
+      "parentId": 120,
+      "type": "actionMenu",
+      "item": {
+        "name": "Save",
+        "variableName": "SetupWiFiSave",
+        "id": 129,
+        "eepromAddress": -1,
+        "functionName": "saveWifi",
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true
+      }
+    },
+    {
+      "parentId": 100,
+      "type": "subMenu",
+      "item": {
+        "secured": false,
+        "name": "MQTT",
+        "variableName": "SetupMQTT",
+        "id": 130,
+        "eepromAddress": -1,
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true
+      }
+    },
+    {
+      "parentId": 130,
+      "type": "boolItem",
+      "item": {
+        "naming": "TRUE_FALSE",
+        "name": "Enable",
+        "variableName": "SetupMQTTEnable",
+        "id": 131,
+        "eepromAddress": -1,
+        "functionName": "setMQTTEnable",
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true
+      }
+    },
+    {
+      "parentId": 130,
+      "type": "textItem",
+      "item": {
+        "textLength": 45,
+        "itemType": "PLAIN_TEXT",
+        "name": "Broker",
+        "variableName": "SetupMQTTBroker",
+        "id": 132,
+        "eepromAddress": -1,
+        "functionName": "setMQTTBroker",
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true
+      }
+    },
+    {
+      "parentId": 130,
+      "type": "analogItem",
+      "item": {
+        "maxValue": 65535,
+        "offset": 0,
+        "divisor": 0,
+        "unitName": "",
+        "name": "Port",
+        "variableName": "SetupMQTTPort",
+        "id": 133,
+        "eepromAddress": -1,
+        "functionName": "setMQTTPort",
+        "readOnly": true,
+        "localOnly": false,
+        "visible": true
+      }
+    },
+    {
+      "parentId": 130,
+      "type": "analogItem",
+      "item": {
+        "maxValue": 600,
+        "offset": 0,
+        "divisor": 0,
+        "unitName": "(S)",
+        "name": "Post Interval",
+        "variableName": "SetupMQTTPostInterval",
+        "id": 134,
+        "eepromAddress": -1,
+        "functionName": "setMQTTPostInterval",
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true
+      }
+    },
+    {
+      "parentId": 130,
+      "type": "enumItem",
+      "item": {
+        "enumEntries": [
+          "Not Avail",
+          "Connected"
+        ],
+        "name": "Status",
+        "variableName": "SetupMQTTStatus",
+        "id": 135,
+        "eepromAddress": -1,
+        "readOnly": true,
+        "localOnly": false,
+        "visible": true
+      }
+    },
+    {
+      "parentId": 130,
+      "type": "actionMenu",
+      "item": {
+        "name": "Save",
+        "variableName": "SetupMQTTSave",
+        "id": 139,
+        "eepromAddress": -1,
+        "functionName": "saveMQTT",
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true
+      }
+    },
+    {
+      "parentId": 100,
+      "type": "actionMenu",
+      "item": {
+        "name": "Reset Preferences",
+        "variableName": "SetupResetPreferences",
+        "id": 199,
+        "eepromAddress": -1,
+        "functionName": "ResetPreferences",
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true
+      }
+    },
+    {
+      "parentId": 0,
+      "type": "subMenu",
+      "item": {
+        "secured": false,
+        "name": "Games",
+        "variableName": "Games",
+        "id": 200,
+        "eepromAddress": -1,
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true
+      }
+    },
+    {
+      "parentId": 200,
+      "type": "actionMenu",
+      "item": {
+        "name": "Quiz",
+        "variableName": "GamesQuiz",
+        "id": 201,
+        "eepromAddress": -1,
+        "functionName": "launchQuiz",
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true
+      }
+    },
+    {
+      "parentId": 200,
+      "type": "actionMenu",
+      "item": {
+        "name": "Game of Life",
+        "variableName": "GamesGameOfLife",
+        "id": 202,
+        "eepromAddress": -1,
+        "functionName": "LaunchGameOfLife",
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true
+      }
+    },
+    {
+      "parentId": 200,
+      "type": "actionMenu",
+      "item": {
+        "name": "Snek",
+        "variableName": "GamesSnek",
+        "id": 203,
+        "eepromAddress": -1,
+        "functionName": "LaunchSnek",
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true
+      }
+    },
+    {
+      "parentId": 0,
+      "type": "subMenu",
+      "item": {
+        "secured": false,
+        "name": "Tools",
+        "variableName": "Tools",
+        "id": 300,
+        "eepromAddress": -1,
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true
+      }
+    },
+    {
+      "parentId": 300,
+      "type": "actionMenu",
+      "item": {
+        "name": "WiFi Scanner",
+        "variableName": "ToolsWiFiScanner",
+        "id": 301,
+        "eepromAddress": -1,
+        "functionName": "LaunchWiFiScanner",
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true
+      }
+    },
+    {
+      "parentId": 300,
+      "type": "actionMenu",
+      "item": {
+        "name": "BLE Scanner",
+        "variableName": "ToolsBLEScanner",
+        "id": 302,
+        "eepromAddress": -1,
+        "functionName": "launchBLEScan",
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true
+      }
+    },
+    {
+      "parentId": 300,
+      "type": "actionMenu",
+      "item": {
+        "name": "Button Test",
+        "variableName": "ToolsButtonTest",
+        "id": 303,
+        "eepromAddress": -1,
+        "functionName": "LaunchButtonTest",
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true
+      }
+    },
+    {
+      "parentId": 0,
+      "type": "subMenu",
+      "item": {
+        "secured": false,
+        "name": "Sensors",
+        "variableName": "Sensors",
+        "id": 400,
+        "eepromAddress": -1,
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true
+      }
+    },
+    {
+      "parentId": 400,
+      "type": "floatItem",
+      "item": {
+        "numDecimalPlaces": 2,
+        "name": "Temperature",
+        "variableName": "SensorsTemperature",
+        "id": 401,
+        "eepromAddress": -1,
+        "readOnly": true,
+        "localOnly": false,
+        "visible": true
+      }
+    },
+    {
+      "parentId": 400,
+      "type": "floatItem",
+      "item": {
+        "numDecimalPlaces": 1,
+        "name": "Humidity",
+        "variableName": "SensorsHumidity",
+        "id": 402,
+        "eepromAddress": -1,
+        "readOnly": true,
+        "localOnly": false,
+        "visible": true
+      }
+    },
+    {
+      "parentId": 400,
+      "type": "floatItem",
+      "item": {
+        "numDecimalPlaces": 2,
+        "name": "Battery Voltage",
+        "variableName": "SensorsBatteryVoltage",
+        "id": 403,
+        "eepromAddress": -1,
+        "readOnly": true,
+        "localOnly": false,
+        "visible": true
+      }
+    },
+    {
+      "parentId": 400,
+      "type": "subMenu",
+      "item": {
+        "secured": false,
+        "name": "Plot Sensors",
+        "variableName": "SensorsPlotSensors",
+        "id": 450,
+        "eepromAddress": -1,
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true
+      }
+    },
+    {
+      "parentId": 400,
+      "type": "actionMenu",
+      "item": {
+        "name": "Plot Temperature",
+        "variableName": "SensorsPlotSensorsPlotTemperature",
+        "id": 451,
+        "eepromAddress": -1,
+        "functionName": "PlotTemperature",
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true
+      }
+    },
+    {
+      "parentId": 400,
+      "type": "actionMenu",
+      "item": {
+        "name": "Plot Humidity",
+        "variableName": "SensorsPlotSensorsPlotHumidity",
+        "id": 452,
+        "eepromAddress": -1,
+        "functionName": "PlotHumidity",
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true
+      }
+    },
+    {
+      "parentId": 400,
+      "type": "actionMenu",
+      "item": {
+        "name": "Plot IMU",
+        "variableName": "SensorsPlotSensorsPlotIMU",
+        "id": 453,
+        "eepromAddress": -1,
+        "functionName": "PlotIMU",
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true
+      }
+    },
+    {
+      "parentId": 0,
+      "type": "actionMenu",
+      "item": {
+        "name": "About",
+        "variableName": "About",
+        "id": 990,
+        "eepromAddress": -1,
+        "functionName": "about",
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true
+      }
+    }
+  ],
+  "codeOptions": {
+    "embeddedPlatform": "ARDUINO_ESP32",
+    "lastDisplayUuid": "e6342680-6fab-4d1b-ac08-ce8dbfc0974c",
+    "lastInputUuid": "2a3ae3ba-05f4-4c9c-aad3-3ddc88df9049",
+    "lastRemoteUuid": "2c101fec-1f7d-4ff3-8d2b-992ad41e7fcb",
+    "lastRemoteUuids": [
+      "2c101fec-1f7d-4ff3-8d2b-992ad41e7fcb"
+    ],
+    "lastThemeUuid": "e4524028-edd8-4e0a-ae15-a1f2ba05354f",
+    "applicationUUID": "670e39bd-6da9-488e-b760-b356d94bca8b",
+    "applicationName": "AVTokyo 2022",
+    "lastProperties": [
+      {
+        "name": "DISPLAY_VARIABLE",
+        "latestValue": "gfx",
+        "subsystem": "DISPLAY"
+      },
+      {
+        "name": "DISPLAY_ROTATION",
+        "latestValue": "1",
+        "subsystem": "DISPLAY"
+      },
+      {
+        "name": "DOUBLE_BUFFER_ROWS",
+        "latestValue": "0",
+        "subsystem": "DISPLAY"
+      },
+      {
+        "name": "UPDATES_PER_SEC",
+        "latestValue": "5",
+        "subsystem": "DISPLAY"
+      },
+      {
+        "name": "SW_POLLING_MODE",
+        "latestValue": "SWITCHES_POLL_EVERYTHING",
+        "subsystem": "INPUT"
+      },
+      {
+        "name": "SWITCH_IODEVICE",
+        "latestValue": "devicePins",
+        "subsystem": "INPUT"
+      },
+      {
+        "name": "ENCODER_UP_PIN",
+        "latestValue": "34",
+        "subsystem": "INPUT"
+      },
+      {
+        "name": "ENCODER_DOWN_PIN",
+        "latestValue": "33",
+        "subsystem": "INPUT"
+      },
+      {
+        "name": "ENCODER_BACK_PIN",
+        "latestValue": "35",
+        "subsystem": "INPUT"
+      },
+      {
+        "name": "ENCODER_NEXT_PIN",
+        "latestValue": "32",
+        "subsystem": "INPUT"
+      },
+      {
+        "name": "ENCODER_OK_PIN",
+        "latestValue": "39",
+        "subsystem": "INPUT"
+      },
+      {
+        "name": "PULLUP_LOGIC",
+        "latestValue": "true",
+        "subsystem": "INPUT"
+      },
+      {
+        "name": "ITEM_FONT",
+        "latestValue": "def:,4",
+        "subsystem": "THEME"
+      },
+      {
+        "name": "TITLE_FONT",
+        "latestValue": "def:,4",
+        "subsystem": "THEME"
+      },
+      {
+        "name": "BORDER_FOR_ACTIONS",
+        "latestValue": "0",
+        "subsystem": "THEME"
+      },
+      {
+        "name": "TITLE_SHOW_MODE",
+        "latestValue": "TITLE_FIRST_ROW",
+        "subsystem": "THEME"
+      },
+      {
+        "name": "USE_SLIDER_ANALOG",
+        "latestValue": "true",
+        "subsystem": "THEME"
+      },
+      {
+        "name": "NEED_EDITING_ICONS",
+        "latestValue": "true",
+        "subsystem": "THEME"
+      }
+    ],
+    "namingRecursive": true,
+    "saveToSrc": true,
+    "useCppMain": true,
+    "eepromDefinition": "",
+    "authenticatorDefinition": "",
+    "projectIoExpanders": [
+      "deviceIO:"
+    ],
+    "menuInMenuCollection": {
+      "menuDefinitions": []
+    },
+    "packageNamespace": "",
+    "appIsModular": false
+  }
+}

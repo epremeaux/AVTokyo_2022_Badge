@@ -1,0 +1,14 @@
+{
+    "idf.portWin": "COM11",
+    "idf.flashType": "UART",
+    "files.associations": {
+        "array": "cpp",
+        "deque": "cpp",
+        "string": "cpp",
+        "unordered_map": "cpp",
+        "unordered_set": "cpp",
+        "vector": "cpp",
+        "initializer_list": "cpp",
+        "string_view": "cpp"
+    }
+}
