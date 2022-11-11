@@ -1,0 +1,20 @@
+https://github.com/sparkfun/BMPtoArray
+
+https://bytemeta.vip/repo/Bodmer/TFT_eSPI/issues/1632
+https://github.com/Bodmer/TFT_eSPI/discussions/1093
+https://lospec.com/palette-list/rggb-4-bit-color-palette
+https://apps.lospec.com/pixel-editor/
+
+
+Tile 4bit sketch demonstrates and works the concept and code
+
+
+
+
+normal sprites (no color palette manipulation):
+https://www.youtube.com/watch?v=wbDrjoxb51I
+https://github.com/Bodmer/TFT_eSPI/issues/517
+use to convert: LCD Image Converter
+ * settings: 
+ *  Image: R5G6B5, Little-Endian / big-endian to fix color swap, block size 16 bit
+ * or use gfx.setSwapBytes(true); to fix color order
