@@ -49,8 +49,7 @@ Node-Red is a very user friendly GUI based data application builder. It was a si
 
 
 ### WiFi BugHunt
-WE had one more game to play at the event: a WiFi BugHunt! These consisted of an ESP32 with battery pack hidden inside the nightclub (see AVTokyo_2022_Badge/Software/AVT_FindMe_Switcher/). Using the WiFi scanner tool in the badge (or your smartphone), players could seek out the three hidden WiFi access points. Once found, there was a QR code printed on the container of the WiFi AP. Scanning the code with your smartphone would bring you to a guest book web page, where you could sign that you found the AP and leave a comment. To make it more challenging, the APs occasionally dropped AP mode and joined local WiFi to send us an MQTT message containing the battery voltage, so we could monitor the devices in real time.
-It was quite entertaining to see all the script attacks people tried on our guestbook page ;)
+WE had one more game to play at the event: a WiFi BugHunt! These consisted of an ESP32 with battery pack hidden inside the nightclub (see AVTokyo_2022_Badge/Software/AVT_FindMe_Switcher/). Using the WiFi scanner tool in the badge (or your smartphone), players could seek out the three hidden WiFi access points. Once found, there was a QR code printed on the container of the WiFi AP. Scanning the code with your smartphone would bring you to a guest book web page, where you could sign that you found the AP and leave a comment. To make it more challenging, the APs occasionally dropped AP mode and joined local WiFi to send us an MQTT message containing the battery voltage, so we could monitor the devices in real time. It was quite entertaining to see all the script attacks people tried on our guestbook page ;)
 ![alt_text](images/promo/BugHuntGuestbook.png "BugHunt form")
 ![alt_text](images/promo/BugHuntResults.png "BugHunt results")
 
