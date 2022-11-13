@@ -10,6 +10,7 @@ The software runs a variety of open source Arduino libraries. In particular, we 
 
 While WiFi is connected and MQTT messaging is enabled, the badge will send Temperature, Humidity and Battery Voltage measurements to an MQTT server every 5 seconds (the interval is redefinable). Additionally, when you obtain a new best personal score on any game, the new score will be queued to be sent in the next MQTT post. While gaming, MQTT posting is temporarily disabled, in order to provide the best gaming experience.
 
+[![Watch the intro video](http://img.youtube.com/vi/L5FsP-4BdB0/2.jpg)](http://www.youtube.com/watch?v=L5FsP-4BdB0 "AVTokyo2022 Badge")
 
 ## Tour of the Board
 Most of the badge components are self-explanatory, but I will attempt to highlight the main components and features. The circuitry between the joystick and screen is responsible for charging the battery (on the back). This is fed from the USB connector, and will charge the battery even when the badge is switched off. There are two LEDs, Standby and Charge. Once fully charged, the Charge LED will turn off and the Standby LED will light. These are rather bright! I started placing tape over my test units to dampend the brightness. ;)
