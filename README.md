@@ -82,7 +82,8 @@ You can add as many WiFi access points as you want. Look at the MyWiFi.cpp file 
 
 In addition to WiFi, you may want to point the badge to your own MQTT server. You may enter it manually in the menu, but you may prefer to hard code it. We have only defined the SECRET_SERVER keyword in the secrets.h file. This assumes an unsecured connection. So, you may want to modify MQTT_Sensors.cpp and secrets.h such that you can define a username and access key in secrets.h.
 
-UPDATE (22/11/24):
+### UPDATE (22/11/24):
+
 While experimenting with some badges, I found that SOME badges have 4MB ESP32 modules, and some have 8MB modules. Of course, we ORDERED 8MB modules. If you are attempting to compile and run this code and the following effects happen (after upload and reset), you likely have a 4MB module:
 
 * red LED at the top right corner of the screen remains dimly light
