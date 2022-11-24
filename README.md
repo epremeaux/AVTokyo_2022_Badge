@@ -108,12 +108,16 @@ HARDWARE: ESP32 240MHz, 320KB RAM, 8MB Flash
 IF you were unlucky enough to get a 4MB module, we are so sorry.. but we cant control unscrupulous suppliers *(
 What to do:
 in the platformio.ini file, find the line which reads:
+
 ```
 board_build.partitions = AVT_8MB_huge.csv
 ```
+
 Change it to read:
+
 ```
 board_build.partitions = huge_app.csv
 ```
+
 This will use a standard partition table for a 4MB ESP32, where most of the space is devoted to a single app, plus bootloader. The base AVT code will occupy 51.5%, still leaving plenty of space for future enhancements.
 By the way, this partition table is the one used in all of the badges on the day of the event. This is why I did not notice that we had a mix of 4MB and 8MB modules. So, I dont know yet what the statistics are on how many of you have each type.
