@@ -61,6 +61,7 @@ The source code is "almost ready to run". You will need to install an editor suc
 Depending on your initial VSCode and PlatformIO configuration, you MAY need to add "lorol/LittleFS_esp32@^1.0.6" to the platform.ini file, under the "lib_deps = " heading. If during compile you receive errors concerning LittleFS, either add it to the platform.ini file, or remove it (just add ; to the beginning of the line).
 
 Additionally, you will need to create a "secrets.h" file like so:
+```
 
 //wifi
 #define SECRET_SSID "your first AP"
@@ -75,7 +76,44 @@ Additionally, you will need to create a "secrets.h" file like so:
 //mqtt
 #define SECRET_SERVER "MQTT URL or IP" 
 
+```
 
 You can add as many WiFi access points as you want. Look at the MyWiFi.cpp file to add them to the array. The badge will first try to connect to whatever AP you have saved manually from the menu system. If that connection fails, it will then scan through the list given at the top of MyWiFi.cpp (the list is filled in from the secrets.h file). It will try to match any of these AP names to a scanned list available. If one matches, it will try to connect.
 
 In addition to WiFi, you may want to point the badge to your own MQTT server. You may enter it manually in the menu, but you may prefer to hard code it. We have only defined the SECRET_SERVER keyword in the secrets.h file. This assumes an unsecured connection. So, you may want to modify MQTT_Sensors.cpp and secrets.h such that you can define a username and access key in secrets.h.
+
+UPDATE (22/11/24):
+While experimenting with some badges, I found that SOME badges have 4MB ESP32 modules, and some have 8MB modules. Of course, we ORDERED 8MB modules. If you are attempting to compile and run this code and the following effects happen (after upload and reset), you likely have a 4MB module:
+
+* red LED at the top right corner of the screen remains dimly light
+* nothing displayed on screen
+* when using the terminal, you see that the ESP is rapidly rebooting, with the following output: 
+```
+rst:0x3 (SW_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:1184
+load:0x40078000,len:12776
+load:0x40080400,len:3032
+entry 0x400805e4
+ets Jul 29 2019 12:21:46
+```
+
+PlatformIO is building an image set larger than the size of the flash storage area. However, it cannot by itself, verify the size. All the checksums are fine. You can confirm the size of your ESP's flash area yourself though. Look in the upload task terminal. When you hit the compile button (check mark on the bottom of VSCode window), one of hte first few lines will read:
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+OR
+HARDWARE: ESP32 240MHz, 320KB RAM, 8MB Flash
+
+IF you were unlucky enough to get a 4MB module, we are so sorry.. but we cant control unscrupulous suppliers *(
+What to do:
+in the platformio.ini file, find the line which reads:
+```
+board_build.partitions = AVT_8MB_huge.csv
+```
+Change it to read:
+```
+board_build.partitions = huge_app.csv
+```
+This will use a standard partition table for a 4MB ESP32, where most of the space is devoted to a single app, plus bootloader. The base AVT code will occupy 51.5%, still leaving plenty of space for future enhancements.
+By the way, this partition table is the one used in all of the badges on the day of the event. This is why I did not notice that we had a mix of 4MB and 8MB modules. So, I dont know yet what the statistics are on how many of you have each type.
